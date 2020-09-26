@@ -1,0 +1,1 @@
+Collection of code that creates a map of a city (in this case SF) with certain interesting real estate metrics and functions such as a slider or a hover function. In addition in contains the functionality to deploy said map to a heroku webapp
