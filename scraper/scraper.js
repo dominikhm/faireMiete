@@ -4,6 +4,8 @@ const fs = require('fs');
 const error = chalk.bold.red;
 const success = chalk.keyword("green");
 
+address = 'Gumpendorfer Straße 12, 1060 Wien';
+
 (async () => {
   try {
     // open the headless browser
@@ -30,7 +32,7 @@ const success = chalk.keyword("green");
       const frame = await elementHandle.contentFrame();
       //enter address
       console.log('filling form in iframe');
-      await frame.type('#input_adresse', 'Gumpendorfer Straße 12, 1060 Wien', { delay: 100});
+      await frame.type('#input_adresse', address, { delay: 100});
 
       //choose first option from dropdown
       console.log('Choosing from dropdown');
@@ -68,7 +70,13 @@ const success = chalk.keyword("green");
             const Arr1 = res[0];
             const Arr2 = res.slice(1,res.length+1);
 
-fs.writeFile("data.json", JSON.stringify(mapFields(Arr1, Arr2)), 'utf8', function(err) {
+            let dataObj = {};
+            dataObj['lagezuschlag'] = mapFields(Arr1, Arr2);
+            dataObj['adresse'] = address;
+
+            // console.log(dataObj);
+
+fs.writeFile("data.json", JSON.stringify(dataObj), 'utf8', function(err) {
     if(err) {
         return console.log(error(err));
     }
