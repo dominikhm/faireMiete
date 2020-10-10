@@ -19,7 +19,7 @@ address = 'Gumpendorfer Straße 12, 1060 Wien';
    // continue without newsletter
       await page.click('#dss-modal-firstvisit-form > button.btn.btn-block.btn-light');
    // let everyhting load
-      await page.waitFor(5000)
+      await page.waitFor(1000)
       console.log('waiting for iframe with form to be ready.');
       //wait until selector is available
       await page.waitForSelector('iframe');
@@ -68,7 +68,7 @@ address = 'Gumpendorfer Straße 12, 1060 Wien';
                     return mappedArray;
                 }
             const Arr1 = res[0];
-            const Arr2 = res.slice(1,res.length+1);
+            const Arr2 = res.slice(1,3);
 
             let dataObj = {};
             dataObj['lagezuschlag'] = mapFields(Arr1, Arr2);
