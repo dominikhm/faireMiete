@@ -1,0 +1,1 @@
+Here we have the code that creates an API to send a query/a specific address and receive the relevant premium information. The API was built using the nodeJS libraries express and puppeteer (web scraper working internally). Result is saved in a JSON.

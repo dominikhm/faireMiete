@@ -1,0 +1,20 @@
+{
+  "name": "faireMieteScraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "csv-parser": "^2.3.3",
+    "csv-writer": "^1.6.0",
+    "puppeteer": "^1.20.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Dominik Maruszczak",
+  "license": "ISC"
+}
